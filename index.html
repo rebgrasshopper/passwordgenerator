@@ -49,23 +49,76 @@
                 <p>128</p>
               </div>
               <div class="current-value">
-                <button id="sliderValue" class="btn mx-auto"></button>
+                <button id="sliderValue" class="btn mx-auto" onclick="chooseCharacters()"></button>
                 <p class='slider-value-label'>Press to accept</p>
                 <p class='slider-value-label'>Current Value</p>
               </div>
-            </div>
+            </div><!--/password-length-input-->
 
             <!--Special Characters-->
-            <div id="special-characters-input">
-
-            </div>
-          </div>
-
+            <div id="special-characters-input" class="flex-row flex-wrap">
+              <p>Now let's pick special characters.</p>
+              <div id='checkboxes'>
+                
+                <div class="box-around-check">
+                  <input checked type="checkbox" id="dash" name="dash" value="dash">
+                  <label for="dash">-</label>
+                </div>
+                    
+                <div class="box-around-check">
+                  <input checked type='checkbox' id='dot' name='dot' value='dot'>
+                  <label for='dot'>.</label>
+                </div>
+                    
+                    <div class="box-around-check">
+                      <input checked type='checkbox' id='underscore' name='underscore' value='underscore'>
+                      <label for='underscore'>_</label>
+                    </div>
+                    
+                    <div class="box-around-check">
+                      <input checked type='checkbox' id='dollar' name='dollar' value='dollar'>
+                      <label for='dollar'>$</label>
+                    </div>
+                    
+                    <div class="box-around-check">
+                      <input checked type='checkbox' id='bang' name='bang' value='bang'>
+                      <label for='bang'>!</label>
+                    </div>
+                    
+                    <div class="box-around-check">
+                      <input checked type='checkbox' id='star' name='star' value='star'>
+                      <label for='star'>*</label>
+                    </div>
+                    
+                    <div class="box-around-check">
+                      <input checked type='checkbox' id='at' name='at' value='at'>
+                      <label for='at'>@</label>
+                    </div>
+                    
+                    <div class="box-around-check">
+                    <input checked type='checkbox' id='question' name='question' value='question'>
+                    <label for='question'>?</label>
+                  </div>
+                  
+                  <div class="box-around-check">
+                    <input checked type='checkbox' id='and' name='and' value='and'>
+                    <label for='and'>&</label>
+                    </div>
+                    
+                    <div class="box-around-check">
+                      <input checked type='checkbox' id='percent' name='percent' value='percent'>
+                      <label for='percent'>%</label>
+                    </div>
+                      
+                
+              </div><!--/checkboxes-->
+            </div><!--/special-characters-input-->
+          </div><!--/option-box-->
         </div><!--/card-body-->
 
         
         <div class="card-footer">
-          <button id="generate" class="btn" onclick="chooseCharacters()">Generate Password</button>
+          <button id="generate" class="btn" onclick="chooseLength()">Generate Password</button>
         </div>
       
       </div><!--/card-->

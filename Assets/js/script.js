@@ -8,21 +8,34 @@ var generateBtn = document.querySelector("#generate");
 
 
 
-// User determined options
+// Password Length Options
+
+function chooseLength() {
+  document.getElementById("password").style.display = "none";
+  document.getElementById("option-box").style.display = "block"
+  document.getElementById("password-length-input").style.display = "block";
+  document.getElementById("generate").style.display = "none";
+}
 
 let slider = document.getElementById("passwordLength");
 let output = document.getElementById("sliderValue");
+output.innerHTML = slider.value;
 
-
-
-
-
-
-//
 slider.oninput = function () {
-  output.innerHTML = slider.value;
   output.innerHTML = this.value;
 }
+
+//Password Character Options 
+
+function chooseCharacters() {
+  document.getElementById("special-characters-input").style.display = "flex";
+  document.getElementById("password-length-input").style.display = "none";
+}
+
+
+
+
+
 
 // Write password to the #password input
 function writePassword() {
@@ -46,4 +59,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", chooseLength);
