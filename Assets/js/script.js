@@ -7,6 +7,23 @@ var generateBtn = document.querySelector("#generate");
   const OKPASSWORDLENGTH = [(passwordLength > 7), (passwordLength <129)]
 
 
+
+// User determined options
+
+let slider = document.getElementById("passwordLength");
+let output = document.getElementById("sliderValue");
+
+
+
+
+
+
+//
+slider.oninput = function () {
+  output.innerHTML = slider.value;
+  output.innerHTML = this.value;
+}
+
 // Write password to the #password input
 function writePassword() {
 

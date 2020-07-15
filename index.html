@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>Password Generator</title>
+
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
     <link rel="stylesheet" href="./Assets/css/style.css" />
   </head>
 
@@ -17,22 +20,54 @@
         <h1>Password Generator</h1>
       </header>
 
+
       <div class="card">
+
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+
         <div class="card-body">
+
+          <!--Final Password Display-->
           <textarea
             readonly
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
-          <div id = "option-box"></div>
-        </div>
+
+          <!--Options Box-->
+          <div id="option-box">
+
+            <!--Password Length-->
+            <div id="password-length-input">
+              <label for="passwordLength" class='mt-5'>How long do you want your password to be?</label>
+              <div class="slider-box d-flex justify-content-center">
+                <p>8</p>
+                <input type="range" min="8" max="128" value="16" class="slider" name="passwordLength" id="passwordLength">
+                <p>128</p>
+              </div>
+              <div class="current-value">
+                <button id="sliderValue" class="btn mx-auto"></button>
+                <p class='slider-value-label'>Press to accept</p>
+                <p class='slider-value-label'>Current Value</p>
+              </div>
+            </div>
+
+            <!--Special Characters-->
+            <div id="special-characters-input">
+
+            </div>
+          </div>
+
+        </div><!--/card-body-->
+
+        
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <button id="generate" class="btn" onclick="chooseCharacters()">Generate Password</button>
         </div>
+      
       </div><!--/card-->
     </div>
 

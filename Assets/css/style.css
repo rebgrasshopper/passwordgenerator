@@ -97,6 +97,12 @@ button[disabled] {
   float: right;
 }
 
+
+
+
+
+/* Different displays in main card */
+
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -123,12 +129,12 @@ button[disabled] {
   -moz-appearance: none;
   appearance: none;
   border: none;
-  display: block;
+  display: none;
   width: 100%;
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 85px;
+  padding-bottom: 15px;
   font-size: 1.2rem;
   text-align: center;
   margin-top: 10px;
@@ -138,6 +144,60 @@ button[disabled] {
   resize: none;
   overflow: hidden;
 }
+
+#special-characters-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: none;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
+}
+
+
+
+
+
+
+/* PASSWORD OPTIONS */
+
+.slider {
+  width: 60%;
+  height: 2rem;
+  background: #d3d3d3;
+  transition: opacity .2s;
+}
+
+p {
+  line-height: 2rem;
+}
+
+
+.slider-value-label {
+  font-size: 12px;
+  margin-top: -1rem;
+  margin-bottom: 0rem;
+}
+
+
+
+
+
+
+
+
 
 @media (max-width: 690px) {
   .btn {
