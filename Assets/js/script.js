@@ -42,9 +42,9 @@ function checkCharacters(array) {
 function generatePassword() {
   
   //set password length
-  let passwordLength = parseInt(prompt("How long should your password be? Pick an integer between 8 and 128."));
+  let passwordLength = parseInt(prompt("How long should your password be? Pick an integer between 8 and 128.", 16));
   while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
-    passwordLength = prompt("I'm sorry, please input an integer between 8 and 128.");
+    passwordLength = prompt("I'm sorry, please input an integer between 8 and 128.", 16);
   } 
 
 
