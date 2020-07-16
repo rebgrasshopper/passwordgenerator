@@ -97,12 +97,6 @@ button[disabled] {
   float: right;
 }
 
-
-
-
-
-/* Different displays in main card */
-
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -123,79 +117,6 @@ button[disabled] {
   resize: none;
   overflow: hidden;
 }
-
-#option-box {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  display: none;
-  width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
-  border-radius: 6px;
-  resize: none;
-  overflow: hidden;
-}
-
-
-
-
-
-
-/* PASSWORD OPTIONS */
-
-#password-length-input {
-  display: none;
-}
-
-#special-characters-input {
-  display: none;
-}
-
-.slider {
-  width: 60%;
-  height: 2rem;
-  background: #d3d3d3;
-  transition: opacity .2s;
-}
-
-p {
-  line-height: 2rem;
-}
-
-
-.slider-value-label {
-  font-size: 12px;
-  margin-top: -1rem;
-  margin-bottom: 0rem;
-}
-
-#checkboxes {
-  width: 100%;
-}
-
-input[type="checkbox"] {
-  margin-left: 30px;
-  margin-top: 6px;
-}
-
-#checkboxes label {
-  margin-left: 4px;
-}
-
-#box-around-check {
-  min-width: fit-content !important;
-}
-
-
 
 @media (max-width: 690px) {
   .btn {

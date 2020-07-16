@@ -1,131 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
 
     <title>Password Generator</title>
-
-    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
-    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-
-
   <body>
-
     <div class="wrapper">
-
       <header>
         <h1>Password Generator</h1>
       </header>
-
-
       <div class="card">
-
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
-
         <div class="card-body">
-
-          <!--Final Password Display-->
           <textarea
             readonly
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
-
-          <!--Options Box-->
-          <div id="option-box">
-
-            <!--Password Length-->
-            <div id="password-length-input">
-              <label for="passwordLength" class='mt-5'>How long do you want your password to be?</label>
-              <div class="slider-box d-flex justify-content-center">
-                <p>8</p>
-                <input type="range" min="8" max="128" value="16" class="slider" name="passwordLength" id="passwordLength">
-                <p>128</p>
-              </div>
-              <div class="current-value">
-                <button id="sliderValue" class="btn mx-auto" onclick="chooseCharacters()"></button>
-                <p class='slider-value-label'>Press to accept</p>
-                <p class='slider-value-label'>Current Value</p>
-              </div>
-            </div><!--/password-length-input-->
-
-            <!--Special Characters-->
-            <div id="special-characters-input" class="flex-row flex-wrap">
-              <p>Now let's pick special characters.</p>
-              <div id='checkboxes'>
-                
-                <div class="box-around-check">
-                  <input checked type="checkbox" id="dash" name="dash" value="dash">
-                  <label for="dash">-</label>
-                </div>
-                    
-                <div class="box-around-check">
-                  <input checked type='checkbox' id='dot' name='dot' value='dot'>
-                  <label for='dot'>.</label>
-                </div>
-                    
-                    <div class="box-around-check">
-                      <input checked type='checkbox' id='underscore' name='underscore' value='underscore'>
-                      <label for='underscore'>_</label>
-                    </div>
-                    
-                    <div class="box-around-check">
-                      <input checked type='checkbox' id='dollar' name='dollar' value='dollar'>
-                      <label for='dollar'>$</label>
-                    </div>
-                    
-                    <div class="box-around-check">
-                      <input checked type='checkbox' id='bang' name='bang' value='bang'>
-                      <label for='bang'>!</label>
-                    </div>
-                    
-                    <div class="box-around-check">
-                      <input checked type='checkbox' id='star' name='star' value='star'>
-                      <label for='star'>*</label>
-                    </div>
-                    
-                    <div class="box-around-check">
-                      <input checked type='checkbox' id='at' name='at' value='at'>
-                      <label for='at'>@</label>
-                    </div>
-                    
-                    <div class="box-around-check">
-                    <input checked type='checkbox' id='question' name='question' value='question'>
-                    <label for='question'>?</label>
-                  </div>
-                  
-                  <div class="box-around-check">
-                    <input checked type='checkbox' id='and' name='and' value='and'>
-                    <label for='and'>&</label>
-                    </div>
-                    
-                    <div class="box-around-check">
-                      <input checked type='checkbox' id='percent' name='percent' value='percent'>
-                      <label for='percent'>%</label>
-                    </div>
-                      
-                
-              </div><!--/checkboxes-->
-            </div><!--/special-characters-input-->
-          </div><!--/option-box-->
-        </div><!--/card-body-->
-
-        
-        <div class="card-footer">
-          <button id="generate" class="btn" onclick="chooseLength()">Generate Password</button>
         </div>
-      
-      </div><!--/card-->
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
     </div>
-
-
     <script src="./Assets/js/script.js"></script>
-
   </body>
 </html>
