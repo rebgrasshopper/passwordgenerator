@@ -46,10 +46,14 @@ function generatePassword() {
   while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
     passwordLength = prompt("I'm sorry, please input an integer between 8 and 128.", 16);
   } 
+  //variables for use outside of while loop:
+  let specialCharacters;
+  let totalAllowedCharacters;
 
-
+  let k = 0;
+  while (k < 1) {
   //set special characters
-  let specialCharacters = prompt('Let\'s talk special characters. You can choose any of these, or none!       [space] !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~', '!$%@#').split('');
+  specialCharacters = prompt('Let\'s talk special characters. You can choose any of these, or none!       [space] !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~', '!$%@#').split('');
   while (!checkCharacters(specialCharacters)) {
     specialCharacters = prompt("I'm sorry, some of those didn't match the allowed characters. You can use  [space] !\"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~', or use these pre-set common characters:", '!$%@#').split('');
   }
@@ -62,7 +66,7 @@ function generatePassword() {
   
 
   //total allowed characters
-  let totalAllowedCharacters = specialCharacters;
+  totalAllowedCharacters = specialCharacters;
 
   if (areLowersOK) {
     totalAllowedCharacters = totalAllowedCharacters.concat(ALLOWEDLOWERCHARACTERS);
@@ -73,14 +77,19 @@ function generatePassword() {
   if (areNumbersOK) {
     totalAllowedCharacters = totalAllowedCharacters.concat(ALLOWEDNUMBERS);
   }
-
-
+  if (specialCharacters.length === 0 && areLowersOK === false && areUppersOK === false && areNumbersOK === false) {
+    alert("I'm sorry, you've selected no characters. Let's go back and try again!")
+  } else {
+    k++;
+  }
+}
 
   //let's set things up so there are at least a few symbols
-  const minNumberOfSpecials = Math.ceil(passwordLength/3);
-  let positionsOfSpecials = [];
-  let i=0;
+  let positionsOfSpecials = []; //make sure that positionOfSpecials is available outside the conditional
 
+  if (specialCharacters.length > 0) {
+  const minNumberOfSpecials = Math.ceil(passwordLength/3);
+  let i=0;
   while (i < minNumberOfSpecials) {
     newNum = Math.floor(Math.random() * passwordLength);
     if (positionsOfSpecials.indexOf(newNum) === -1) {
@@ -88,7 +97,7 @@ function generatePassword() {
       i++;
     }
   }
-    
+    }
   
   //finally build password
   let passwordText ="";
