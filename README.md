@@ -1,49 +1,36 @@
-# Password Generator #
+# Javascript Math.random() Password Generator #
 
 ![screenshot of password generator](./Assets/03-javascript-homework-demo.png)
 https://rebgrasshopper.github.io/passwordgenerator/
 
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+Table of Contents:
 
-If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
+- [Section 1: Introduction](#introduction)
+- [Section 2: Usage](#usage)
+- [Section 3: Credits](#credits)
+- [Section 4: License](#license)
 
-## User Story
+## Introduction ##
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+This project can be accessed from any browser on an internet-connected device. It uses a prompt/confirm interface to navigate the various password options, and the password can be copied from the window at the completion of the process.
 
-## Acceptance Criteria
+The program allows for choosing a length between 8 and 128, opting in or out of lower case characters, upper case characters, numbers, and choosing any or none of the available special characters.
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+## Usage ##
 
-The following image demonstrates the application functionality:
+The source files for this password generator can be access through cloning the GitHub repo. The link above will take you to the live page.
 
-## Review
+## Credits ##
 
-You are required to submit the following for review:
+Thanks to my coding co-op, and you can catch some of 'em here:
 
-* The URL of the deployed application.
+- [Zachary Bryan](https://github.com/zacharybryan)
+- [Tim Sanders](https://github.com/tbsanders5)
+- [Nick Konzen](https://github.com/NTKonzen)
+- [Kira Bismuth Lowrey](https://github.com/KILowrey)
+- [Nancy Lambert-Brown](https://github.com/n-lambert)
+- [Mando Estrada](https://github.com/Mando619)
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+## License ##
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+GNU General Public License
