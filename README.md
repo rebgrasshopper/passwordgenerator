@@ -30,6 +30,13 @@ Thanks to my coding co-op, and you can catch some of 'em here:
 - [Kira Bismuth Lowrey](https://github.com/KILowrey)
 - [Nancy Lambert-Brown](https://github.com/n-lambert)
 - [Mando Estrada](https://github.com/Mando619)
+- [Talia Vazquez](https://github.com/taliavazquez)
+- [Perry Theobald](https://github.com/perrytjr)
+- [Jeneth Diestra](https://github.com/jen6one9)
+- [Matthew Rogers](https://github.com/Rogers-Development-Services)
+- [Jefrrey Choi](https://github.com/jepoy92)
+
+
 
 ## License ##
 
