@@ -1,5 +1,5 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+const generateBtn = document.querySelector("#generate");
 
 //PREKNOWN VARIABLES
 
@@ -29,10 +29,10 @@ function checkCharacters(array) {
       unaccepted += 1;
     } else {
       console.log(array[i] + " is all good!");
-      i++
+      i++;
     }
   }
-  return (unaccepted === 0)
+  return (unaccepted === 0);
 }
 
 
@@ -78,7 +78,7 @@ function generatePassword() {
     totalAllowedCharacters = totalAllowedCharacters.concat(ALLOWEDNUMBERS);
   }
   if (specialCharacters.length === 0 && areLowersOK === false && areUppersOK === false && areNumbersOK === false) {
-    alert("I'm sorry, you've selected no characters. Let's go back and try again!")
+    alert("I'm sorry, you've selected no characters. Let's go back and try again!");
   } else {
     k++;
   }
@@ -91,7 +91,7 @@ function generatePassword() {
   const minNumberOfSpecials = Math.ceil(passwordLength/3);
   let i=0;
   while (i < minNumberOfSpecials) {
-    newNum = Math.floor(Math.random() * passwordLength);
+    let newNum = Math.floor(Math.random() * passwordLength);
     if (positionsOfSpecials.indexOf(newNum) === -1) {
       positionsOfSpecials.push(newNum);
       i++;
@@ -101,7 +101,7 @@ function generatePassword() {
   
   //finally build password
   let passwordText ="";
-  i = 0;
+  let i = 0;
   while (i < passwordLength) {
     if (positionsOfSpecials.includes(i)) {
       let charIndex = Math.floor(Math.random() * specialCharacters.length);
@@ -114,7 +114,7 @@ function generatePassword() {
     }
   }
 
-  return passwordText //password is made! end of generatePassword()
+  return passwordText; //password is made! end of generatePassword()
 }
 
 
