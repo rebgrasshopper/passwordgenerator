@@ -18,7 +18,7 @@ The program allows for choosing a length between 8 and 128, opting in or out of 
 
 ## Usage ##
 
-The source files for this password generator can be access through cloning the GitHub repo. The link above will take you to the live page.
+The source files for this password generator can be accessed through cloning the GitHub repo. The link above will take you to the live page.
 
 ## Credits ##
 
